@@ -13,7 +13,6 @@
 
 <body>
     <header class="site-header">
-        <h1 class="align-center">Mi parcial</h1>
         <nav class="navbar flex-container justify-between">
             <ul class="toplist flex-container align-center justify-between">
                 <li>Inicio</li>
@@ -26,35 +25,31 @@
     </header>
     <div class="main-container">
         <form class="main-form flex-container align-center">
-            <div class="row flex-container">
             <div class="field">
                 <label for="formNombre">Nombre:</label><br>
                 <input type="text" id="formNombre" name="formNombre" placeholder="Nombre">
             </div>
-            
+
             <div class="field">
                 <label for="formApellido">Apellido:</label><br>
-                <input type="text" id="formApellido" name="formApellido" >
+                <input type="text" id="formApellido" name="formApellido" placeholder="Apellido">
             </div>
-            </div>
-            <div class="row flex-container">
-            <div class="field">
+            <div class="field field-email">
                 <label for="formEmail">Email:</label><br>
-                <input type="email" id="formEmail" name="formEmail">
+                <input type="email" id="formEmail" name="formEmail" placeholder="Email">
             </div>
-            <div class="field">
+            <div class="field field-edad">
                 <label for="formEdad">Edad:</label><br>
-                <input type="text" id="formEdad" name="formEdad">
-            </div>
+                <input type="text" id="formEdad" name="formEdad" placeholder="Edad">
             </div>
             <div class="field">
                 <label>Sexo</label><br>
-                <input type="radio" id="hombre" name="formSexo">
-                <label for="hombre">Hombre</label><br>
-                <input type="radio" id="mujer" name="formSexo">
-                <label for="mujer">Mujer</label><br>
-                <input type="radio" id="none" name="formSexo">
-                <label for="none">Prefiero no decir</label><br>
+                <select class="sexo">
+                    <option value="" disabled selected hidden>Seleccione sexo...</option>
+                    <option value="A">Hombre</option>
+                    <option value="B">Mujer</option>
+                    <option value="C">Prefiero no decir</option>
+                </select>
             </div>
             <div class="field">
                 <label>Temas de interés</label><br>
@@ -70,6 +65,7 @@
                 <label for="otros">Otros</label><br>
             </div>
             <div class="field">
+                <label>País</label>
                 <select class="paises">
                     <option value="" disabled selected hidden>Seleccione país...</option>
                     <option value="A">Argentina</option>
@@ -78,12 +74,16 @@
                     <option value="D">Uruguay</option>
                 </select>
             </div>
-            <div class="field">
+            <div class="field field-comentarios">
                 <label for="formComentarios">Comentarios adicionales:</label><br>
                 <input type="text" id="formComentarios" name="formComentarios"><br>
+            </div>
+            <div>
+                <button id="submit-button" type="submit">Suscribir</button>
             </div>
         </form>
     </div>
     <footer></footer>
 </body>
+
 </html>

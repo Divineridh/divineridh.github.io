@@ -24,7 +24,7 @@
 
 .site-header {
     z-index: 99;
-    height: 180px;
+    height: 80px;
 }
 
 .navbar {
@@ -52,7 +52,7 @@
 .main-form {
     flex-direction: column;
     margin: 0 auto;
-    width: 100%;
+    width: 60%;
 }
 
 .main-form input[type=text], input[type=email] {
@@ -64,15 +64,14 @@
     resize: vertical;
 }
 
-.row {
-    float:left;
-    width: 75%;
-}
-
 .field {
     padding: 12px;    
     float: left;
     width: 50%;
+}
+
+.field-edad {
+    width: 20%;
 }
 
 .main-form select {
@@ -83,4 +82,12 @@
 
 .paises option {
     direction: left;
+}
+
+.field-comentarios {
+    height: 150px;
+}
+
+.field-comentarios input {
+    height: 100%;
 }
