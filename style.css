@@ -1,0 +1,86 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.site-header {
+    z-index: 99;
+    height: 180px;
+}
+
+.navbar {
+    background-color: #242424;
+    height: 50px;
+}
+
+.toplist {
+    width: 500px;
+    margin: 0 auto;
+    color: aliceblue;
+    line-height: 1;
+}
+
+.toplist li {
+    list-style: none;
+    font-size: 14px;
+    font-family: "Arimo",sans-serif;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.main-form {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-form input[type=text], input[type=email] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.row {
+    float:left;
+    width: 75%;
+}
+
+.field {
+    padding: 12px;    
+    float: left;
+    width: 50%;
+}
+
+.main-form select {
+    padding: 10px 20px;
+    width: 100%;
+    text-align-last: left;
+}
+
+.paises option {
+    direction: left;
+}
