@@ -25,8 +25,8 @@ window.onload = function () {
     function VerifyApellido(e) {
         var x = apellido.value;
         if (x.length < 3) {
-            nombre.setCustomValidity("El apellido debe tener por lo menos 3 caracteres");
-            nombre.classList.add("form-error");
+            apellido.setCustomValidity("El apellido debe tener por lo menos 3 caracteres");
+            apellido.classList.add("form-error");
         }
     }
 
@@ -37,16 +37,16 @@ window.onload = function () {
             return re.test(String(x).toLowerCase());
         }
         if (x.length < 3) {
-            nombre.setCustomValidity("El apellido debe tener por lo menos 3 caracteres");
-            nombre.classList.add("form-error");
+            email.setCustomValidity("El apellido debe tener por lo menos 3 caracteres");
+            email.classList.add("form-error");
         }
     }
 
     function VerifyEdad(e) {
-        var x = apellido.value;
+        var x = edad.value;
         if (x < 1 && x > 99) {
-            nombre.setCustomValidity("La edad debe ser un numero entre 0 y 100");
-            nombre.classList.add("form-error");
+            edad.setCustomValidity("La edad debe ser un numero entre 0 y 100");
+            edad.classList.add("form-error");
         }
     }
 }
