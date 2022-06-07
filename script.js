@@ -1,18 +1,52 @@
-document.getElementById("submitButton").addEventListener("click", function() {
+window.onload = function () {
 
-});
-
-function VerifyNombre(e) {
-    e.preventDefault();
+    document.getElementById("submitButton").addEventListener("click", function () {
+        VerifyNombre();
+        VerifyApellido();
+        VerifyEmail();
+        VerifyEdad();
+    });
 
     var nombre = document.getElementById("formNombre");
-    var x = nombre.value;
-    if (x.length < 3) {
-        const nameError = document.getElementById("nameError");
-        nameError.classList.add("visible");
-        nombre.classList.add("invalid");
-        nameError.setAttribute("aria-hidden", false);
-        nameError.setAttribute("aria-invalid", true);
+    var apellido = document.getElementById("formApellido");
+    var email = document.getElementById("formEmail");
+    var edad = document.getElementById("formEdad");
+    var genero = document.getElementById("formGenero");
+
+
+    function VerifyNombre(e) {
+        var x = nombre.value;
+        if (x.length < 3) {
+            nombre.setCustomValidity("El nombre debe tener por lo menos 3 caracteres");
+            nombre.classList.add("form-error");
+        }
     }
 
+    function VerifyApellido(e) {
+        var x = apellido.value;
+        if (x.length < 3) {
+            nombre.setCustomValidity("El apellido debe tener por lo menos 3 caracteres");
+            nombre.classList.add("form-error");
+        }
+    }
+
+    function VerifyEmail(e) {
+        var x = email.value;
+        const isValidEmail = x => {
+            const re = /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(x).toLowerCase());
+        }
+        if (x.length < 3) {
+            nombre.setCustomValidity("El apellido debe tener por lo menos 3 caracteres");
+            nombre.classList.add("form-error");
+        }
+    }
+
+    function VerifyEdad(e) {
+        var x = apellido.value;
+        if (x < 1 && x > 99) {
+            nombre.setCustomValidity("La edad debe ser un numero entre 0 y 100");
+            nombre.classList.add("form-error");
+        }
+    }
 }
